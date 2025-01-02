@@ -1,22 +1,5 @@
 {
 	"core:creatureGeneratorCommon": {
-		"base": {
-			"base": {
-				"mask": [
-					"VVV",
-					"VVV",
-					"VBA"
-				]
-			},
-			"sounds": {
-				"ambient": [
-					"LOOPSWOR"
-				],
-				"visit": [
-					"MILITARY"
-				]
-			}
-		},
 		"types": {
 			"rn_creature_lvl1_dwelling": {
 				"name": "Shirefolk",
@@ -28,11 +11,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPELF"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl1"
+						"animation": "ruins/map/lvl1",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			},
@@ -46,11 +33,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPCAVE"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl2"
+						"animation": "ruins/map/lvl2",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			},
@@ -64,11 +55,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPDWAR"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl3"
+						"animation": "ruins/map/lvl3",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			},
@@ -82,11 +77,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPHYDR"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl4"
+						"animation": "ruins/map/lvl4",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			},
@@ -100,11 +99,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPAIR"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl5"
+						"animation": "ruins/map/lvl5",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			},
@@ -118,11 +121,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPBEHE"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl6"
+						"animation": "ruins/map/lvl6",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			},
@@ -136,11 +143,15 @@
 				"sounds": {
 					"ambient": [
 						"LOOPEART"
+					],
+					"visit": [
+						"MILITARY"
 					]
 				},
 				"templates": {
 					"default": {
-						"animation": "ruins/map/lvl7"
+						"animation": "ruins/map/lvl7",
+						"mask": [ "VVV", "VVV", "VBA" ]
 					}
 				}
 			}
