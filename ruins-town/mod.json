@@ -3,7 +3,7 @@
 	"description": "Ruins town\n - \n\nMod done with much affection, enjoy. I await your feedback.\n\n More info at http://heroescommunity.com/viewthread.php3?TID=44951 \r\n\r\nOpen manual.pdf file inside mod directory",
 	"author": "Fiorin, Stefan Ciobanu",
 	"contact": "https://fior.in",
-	"version": "2.0.23",
+	"version": "2.0.24",
 	"modType": "Town",
 	"depends": [
 		"hota.cove",
@@ -49,6 +49,9 @@
 		]
 	},
 	"changelog": {
+		"2.0.24": [
+			"Bug fixes"
+		],
 		"2.0.23": [
 			"Added Legacy view submod",
 			"Updated Czech translation with Legacy view strings submod"
