@@ -9,7 +9,7 @@
 			"130px": "ruins/creaturebg130px"
 		},
 		"town": {
-			"primaryResource": "wood",
+			"primaryResource": "ore",
 			"mapObject": {
 				"filters": {
 					"castle": [
@@ -102,14 +102,14 @@
 			],
 			"guildWindow": "ruins/town/mageguild",
 			"names": [
-				"Welnin ",
-				"Harmondale ",
+				"Welnin",
+				"Harmondale",
 				"Stormhammer",
 				"Hillrock",
 				"Ashflame",
 				"Lindisfarne",
 				"Aberystwyth",
-				"Clifden ",
+				"Clifden",
 				"Tintagel",
 				"Oban",
 				"Dingle"
