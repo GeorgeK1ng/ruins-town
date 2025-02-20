@@ -180,25 +180,30 @@
               }
             ]
           },
-          "id": 23,
+          "id": 22,
           "name": "Monument",
           "requires": ["townHall"]
         },
         "special4": {
           "cost": { "gold": 500, "ore": 5 },
           "description": "The Jail grants visiting heroes +1 defence and block attacker fleeing combat.",
-          "configuration": {
-            "visitMode": "hero",
-            "rewards": [
-              {
-                "message": "Combat tactics learned through grant you a better understanding of the enemy (+1 Defence). Attacker cannot flee siege combat.",
-                "primary": { "defence": 1 }
-              }
-            ]
-          },
+		  "configuration" : {
+			"visitMode" : "bonus",
+			"rewards" : [
+				{
+					"message" : "Combat tactics learned through grant you a better understanding of the enemy (+1 Defence). Attacker cannot flee siege combat (Fleeing doesn't work yet).",
+				    "primary": { "defence": 1 }
+				},
+				{
+					"bonuses" : [ 
+						{ "type": "BATTLE_NO_FLEEING", "propagator": "BATTLE_WIDE" }
+					]
+				}				
+			]
+		  },
           "id": 23,
           "name": "Jail",
-          "requires": ["townHall", "blacksmith"]
+          "requires": [ "allOf", ["townHall"], ["blacksmith"] ]
         },
         "hordeLvl6": {
           "cost": { "gold": 1500 },
@@ -228,7 +233,7 @@
               "type": "STACK_HEALTH",
               "val": 20,
               "valueType": "PERCENT_TO_BASE",
-              "propagator": "GLOBAL_EFFECT",
+              "propagator": "TEAM_PROPAGATOR",
               "limiters": [
                 {
                   "type": "CREATURE_FACTION_LIMITER",
@@ -237,11 +242,18 @@
               ]
             },
             {
-              "type": "HERO_SPELL",
-              "val": "sacrifice",
-              "valueType": "MAX_LEVEL",
-              "propagator": "GLOBAL_EFFECT"
-            }
+              "type": "SPELL",
+              "subtype": "spell.sacrifice",
+              "val": 3,
+			  "valueType" : "INDEPENDENT_MAX",
+              "propagator": "TEAM_PROPAGATOR",
+              "limiters": [
+                {
+                  "type": "CREATURE_FACTION_LIMITER",
+                  "parameters": ["ruins"]
+                }
+              ]	
+			}
           ]
         },
         "dwellingLvl1": {
