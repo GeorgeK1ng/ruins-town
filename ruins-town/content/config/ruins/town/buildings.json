@@ -187,20 +187,19 @@
         "special4": {
           "cost": { "gold": 500, "ore": 5 },
           "description": "The Jail grants visiting heroes +1 defence and block attacker fleeing combat.",
-		  "configuration" : {
-			"visitMode" : "bonus",
-			"rewards" : [
-				{
-					"message" : "Combat tactics learned through grant you a better understanding of the enemy (+1 Defence). Attacker cannot flee siege combat (Fleeing doesn't work yet).",
-				    "primary": { "defence": 1 }
-				},
-				{
-					"bonuses" : [ 
-						{ "type": "BATTLE_NO_FLEEING", "propagator": "BATTLE_WIDE" }
-					]
-				}				
-			]
-		  },
+		  "bonuses": [
+			{
+				"type": "PRIMARY_SKILL",
+				"subtype" : "defence",
+				"val": 1
+			},
+			{
+				"propagator": "BATTLE_WIDE",
+				"type": "BATTLE_NO_FLEEING",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			}
+		  ],
           "id": 23,
           "name": "Jail",
           "requires": [ "allOf", ["townHall"], ["blacksmith"] ]
